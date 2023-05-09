@@ -8,7 +8,7 @@ class DBManager
     {
         try{
             $this->bdd = new PDO(
-                'mysql:host=localhost;dbname=LA TODO list des vacances;charset=utf8',
+                'mysql:host=localhost;dbname=TODO-LIST-VACANSES;charset=utf8',
                 'root',
                 'root' //MDP
             );
