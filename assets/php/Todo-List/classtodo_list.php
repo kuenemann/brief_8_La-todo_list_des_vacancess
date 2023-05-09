@@ -1,11 +1,12 @@
+
 <?php
 
- class task
-{
+ class Task {
     private $id;
     private $title;
     private $description;
     private $important_bool;
+
 
     public function __construct($title, $description, $important_bool = false, $id = null)
     {
@@ -48,26 +49,5 @@
     public function setImportant_bool($important_bool)
     {
         $this->important_bool = $important_bool;
-    }
-
-    public function save($bdd)
-    {
-        if ($this->id === null) {
-            $req = $bdd->prepare('INSERT INTO task (title, description, important_bool) VALUES (:title, :description, :important_bool)');
-            $req->execute(array(
-                'title' => $this->title,
-                'description' => $this->description,
-                'important_bool' => $this->important_bool
-            ));
-            $this->id = $bdd->lastInsertId();
-        } else {
-            $req = $bdd->prepare('UPDATE task SET title = :title, description = :description, important_bool = :important_bool WHERE id = :id');
-            $req->execute(array(
-                'title' => $this->title,
-                'description' => $this->description,
-                'important_bool' => $this->important_bool,
-                'id' => $this->id
-            ));
-        }
     }
 }

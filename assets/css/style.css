@@ -1,49 +1,82 @@
 table {
-    border-collapse: collapse;
-    margin: auto;
-    width: 80%;
-  }
-  
-  table th,
-  table td {
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  table th {
-    background-color:brown;
-    color: white;
-  }
-  
-  table tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  .button-delete {
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-  }
-  
-  .button-delete:hover {
-    filter: brightness(80%);
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 2%;
-  }
-  
-  .table-container {
-    margin-top: 3%;
-  }
-  
-  p {
-    text-align: center;
-    margin-top: 3%;
-  }
-  
-body{
-    background-color:#F7DC6F;
-} 
+  border-collapse: collapse;
+  margin: auto;
+  width: 80%;
+}
+
+table th,
+table td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+table th {
+  background-color: brown;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+
+}
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+.table-container {
+  margin-top: 3%;
+}
+
+p {
+  text-align: center;
+  margin-top: 3%;
+}
+
+body {
+  background-color:cadetblue;
+}
+
+/* Formulaire*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+label {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="checkbox"] {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+input[type="submit"] {
+  background-color: brown;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+input[type="Delete"]{
+  background-color: brown;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0px;
+  cursor: pointer;
+  text-align: center;
+}
